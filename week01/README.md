@@ -1,3 +1,7 @@
+## Slides
+
+https://musa-5090-spring-2024.github.io/presentation_slides/week01/SLIDES.html
+
 ## In-class Exercise
 
 * [Set up PostgreSQL and PostGIS](ex_postgres.md)
