@@ -1,8 +1,19 @@
+# Install QGIS
+
+I recommend installing QGIS first, because:
+1.  we'll use it later, and
+2.  PostGIS and QGIS share many of the same dependencies, so if QGIS is installed correctly, you'll have an easier time installing PostGIS (especially if you're on Windows).
+
 # Install PostgreSQL
 
-You can find a set of installation instruction for your platform at https://www.postgresql.org/download/. Pay close attention to the port that you configure PostgreSQL to work on during installation -- `5432` is the default, but there are cases where that may not be the port used.
+You can find a set of installation instruction for your platform at https://www.postgresql.org/download/ (but check out the _Getting Started_ video for your operating system below first). Pay close attention to the port that you configure PostgreSQL to work on during installation -- `5432` is the default, but there are cases where that may not be the port used.
 
 Make sure you install PostGIS along with PostgreSQL.
+
+Helpful links:
+- [postgis.net - Gettings Started - Installing PostGIS](https://postgis.net/documentation/getting_started/#installing-postgis)
+- [Getting Started with PostGIS in QGIS on Windows (🎥)](https://video.osgeo.org/w/bRrjXpTBKLWN17LNHj7LXq)
+- [Getting Started with PostGIS in QGIS on macOS (🎥)](https://video.osgeo.org/w/pxcBCc4oHhAZvUi9NdWxXf)
 
 # Configure PGAdmin
 
@@ -95,7 +106,7 @@ Let's use the Philadelphia Neighborhoods dataset from Azavea to continue with ou
 
     The `ogr2ogr` command converts some spatial data from one format to another (in this case from GeoJSON to PostGIS). The `-f` value specifies the output format. The `-nln` value specifies the name of the table in the database. The `-lco` lines represent other options you can specify (such as the type of geometry and the name of the geometry field). The line that starts with `PG:` is for the output location, and the next line is for the input location.
 
-    Next week we'll go over some other ways to load data into PostgreSQL.
+    In the lecture for next week we'll go over some other ways to load data into PostgreSQL.
 
 ## 4. Query the data.
 

@@ -2,15 +2,15 @@
 
 * **Instructor(s):**
   * Mjumbe Poe, mjumbe@design.upenn.edu
-  * Jingyi Li, jingyili@design.upenn.edu
+  * Sofia Fasullo, sfasullo@design.upenn.edu
 * **Schedule:** Wednesdays, 10:15-1:15
-* **Room:** Meyerson Hall, B2
+* **Room:** Meyerson Hall, B13
 * **Office Hours:**
   * Mjumbe:
     * In person Wednesdays immediately after class, first-come first-served
-    * Online Mondays 1:00 - 5:00 & Thursday, 1:00 - 3:30 - [book here](https://calendly.com/mjumbe-upenn/office-hours)
-  * Jingyi:
-    * In person (Meyerson 406) or via Zoom on Tuesdays 11:30a - 1:30p & Thursdays 12:00p - 1:00p - [book here](https://calendly.com/jingyili-ta/musa5090-spring-2023-office-hour)
+    * By appointment
+  * Sofia:
+    * TBD
 
 [Description](#description) | [Schedule](#course-schedule) | [Objectives](#course-objectives) | [Format](#format) | [Assignments](#assignments) | [Grading](#grading) | [Academic Integrity](#academic-integrity)
 
@@ -31,24 +31,23 @@ The class is divided into four modules:
 ## Course Schedule
 (subject to adapt to the flow of the semester)
 
-|  W#  |  Date  |  Topic  |  Notes  |
-|------|--------|---------|---------|
-|  1   |  Jan 18  |  Introduction  |  [Slides](https://musa-509-spring-2023.github.io/course-info/week01/SLIDES.html) & [More](week01/)  |
-|  2   |  Jan 25  |  _Analytics_: Spatial Databases & Querying Geospatial Data  |  [Slides](https://musa-509-spring-2023.github.io/course-info/week02/SLIDES.html) & [More](https://github.com/musa-509-spring-2023/course-info/tree/main/week02)  |
-|  3   |  Feb 1   |  _Analytics_: Joins & More Geospatial SQL Operations  |  [Slides](https://musa-509-spring-2023.github.io/course-info/week03/SLIDES.html) & [More](https://github.com/musa-509-spring-2023/course-info/tree/main/week03)  |
-|  4   |  Feb 8   |  _Analytics_: Efficient Queries  |  [Slides](https://musa-509-spring-2023.github.io/course-info/week04/SLIDES.html) & [More](https://github.com/musa-509-spring-2023/course-info/tree/main/week04)  |
-|  5   |  Feb 15  |  **-(OVERFLOW** -- _We'll introduce BigQuery and some out-of-the-box visualization options here, time permitting_ **)-**  |  [Slides](https://musa-509-spring-2023.github.io/course-info/week05/SLIDES.html) & [More](https://github.com/musa-509-spring-2023/course-info/tree/main/week05)  |
-|  6   |  Feb 22  |  _Scripting_: Working with Data from Files and Web Services  |  [Slides](https://musa-509-spring-2023.github.io/course-info/week06/SLIDES.html) & [More](https://github.com/musa-509-spring-2023/course-info/tree/main/week06)  |
-|  7   |  Mar 1   |  _Scripting_: More Extracting Data  |  [Slides](https://musa-509-spring-2023.github.io/course-info/week07/SLIDES.html) & [More](https://github.com/musa-509-spring-2023/course-info/tree/main/week07)  |
-|  -   |  Mar 8   |  **-(SPRING BREAK)-**  |  -  |
-|  8   |  Mar 15  |  _Pipelines_: Implementing ETL in Cloud Services  |  [Slides](https://musa-509-spring-2023.github.io/course-info/week08/SLIDES.html) & [More](https://github.com/musa-509-spring-2023/course-info/tree/main/week08)  |
-|  9   |  Mar 22  |  _Pipelines_: Deploying to the cloud  |  [Slides](https://musa-509-spring-2023.github.io/course-info/week09/SLIDES.html) & [More](https://github.com/musa-509-spring-2023/course-info/tree/main/week09)  |
-|  10  |  Mar 29  |  _Interfaces_: Open Source Business Intelligence Tools  |   |
-|  11  |  Apr 5   |  _Interfaces_: Rendering Data with Custom Applications (APIs and Templates)  |   |
-|  12  |  Apr 12  |    |   |
-|  13  |  Apr 19  |    |   |
-|  14  |  Apr 26  |   |   |
-|  15  |  May 3?  |  Final Project wrap-up  |   |
+|  W#  |  Date  |  Topic  |
+|------|--------|---------|
+|  1   |  Jan 24  |  Introduction  |
+|  2   |  Jan 31  |  _Analytics_: Spatial Databases & Querying Geospatial Data  |
+|  3   |  Feb 7   |  _Analytics_: Joins & More Geospatial SQL Operations  |
+|  4   |  Feb 14   |  _Analytics_: Efficient Queries  |
+|  5   |  Feb 21  |  _Scripting_: Working with Data from Files and Web Services  |
+|  6   |  Feb 28  |  _Scripting_: More Extracting Data  |
+|  -   |  Mar 6   |  **-(SPRING BREAK)-**  |
+|  7   |  Mar 13   |  _Pipelines_: Implementing ETL in Cloud Services  |
+|  8   |  Mar 20  |  _Pipelines_: Deploying to the cloud  |
+|  9   |  Mar 27  |  _Interfaces_: Open Source Business Intelligence Tools  |
+|  10  |  Apr 3  |  _Interfaces_: Rendering Data with Custom Applications (APIs and Templates)  |
+|  11  |  Apr 10   |    |
+|  12  |  Apr 17  |    |
+|  13  |  Apr 24  |    |
+|  14  |  May 1  |   |
 
 ## Course Objectives
 
@@ -61,9 +60,19 @@ Students will learn how to use professional tools and cloud-based services to au
 
 ## Format
 
-* The course will be divided between lectures during the first half of class sessions, and exercises/labs in the second half.
-* Lab sessions will be interactive, usually with some deliverable expected by the end that will make up part of the participation portion of a student's grade.
-* Students will have the option of attending the lecture and lab sessions in person in the classroom, or virtually through Zoom.
+- The majority of lectures will be asynchronous.
+- The beginning of each class will be devoted to answering questions, clarifying content, or discussions.
+- The later part of classes will be interactive, sometimes with some deliverable expected by the end that will make up part of the participation portion of your grade.
+
+## Guidelines
+
+As we will be collaborating on projects, we will need to use common tools and practices. As such, I will run this course as a benevolent dictator.
+
+* If you are using Python:
+  - You will use `poetry` to manage your dependencies. I will use `poetry` in my examples.
+* If you are using JavaScript:
+  - You will use `npm` to manage your dependencies. I will use `npm` in my examples.
+* Your code will conform to the linter rules we agree upon as a class (and I have veto power on rules).
 
 ## Assignments
 
