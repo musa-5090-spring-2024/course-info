@@ -82,17 +82,19 @@ The final project will be the culmination of all of the skills learned in the cl
 
 ## Grading
 
-* Assignments: 25%
-* Participation: 25%
-* Final Project Proposal: 10%
-* Final Project: 40%
+* Assignments & Participation: 50%
+* Final Project: 50%
 
 ## Course Data
 
-Some of the data we are using in this course is proprietary and cannot be openly disseminated. In these cases students will be provided with access to private class repositories of datasets. Derivative insights based on these datasets can be openly shared, especially as part of final project work.
+Some of the data we are using in this course may be proprietary and cannot be openly disseminated. In these cases students will be provided with access to private class repositories of datasets. Derivative insights based on these datasets can be openly shared, especially as part of final project work.
 
 ## Academic Integrity
 
-Students are expected to comply with and be familiar with [Penn's Code of Academic Integrity](https://catalog.upenn.edu/pennbook/code-of-academic-integrity).
+In compliance with Penn's [Code of Academic Integrity](http://www.upenn.edu/academicintegrity/ai_codeofacademicintegrity.html), blatantly and egregiously copying another student's work will not be tolerated. However, because this course is designed to help prepare students for work in professional programming environments, *copying and pasting is not universally prohibited*: we encourage students to work together and to freely use the internet as a resource for finding solutions to vexing problems. Citing every copied and pasted line of code is *not* necessary. Large patterns or multiple lines of code taken from external sources *should*, however, be noted with in-code comments. If an instance is unclear, you should feel free to speak with the instructors.
 
-When writing software, it is common to copy and paste small code snippets from online sources without citation. For larger samples, it is expected that the source is cited in the code base. In case there is uncertainty, speak with your instructor for guidance.
+### Note about AI tools...
+
+I don't mind generative AI tools to help with coding -- I use them myself on a limited basis. If you use Chat GPT or any other AI tool, note that you are subject to the same guidelines around citation as above.
+
+Also, understand that many of these tools often make mistakes that can be difficult to identify if you don't know what you're doing. If you and can verify that the generated code is correct, cool. But if you come to me or the TA to help debugging something generated with AI, it is always best to disclose the source of the code (for that matter, I'll be able to tell), as it would be with any code.
