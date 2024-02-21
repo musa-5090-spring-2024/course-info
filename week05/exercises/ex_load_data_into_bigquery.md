@@ -18,9 +18,9 @@ Let's use the following datasets (all available from [OpenDataPhilly](https://op
 4.  Copy your data to native BigQuery tables
     - Create a dataset in your GCP project named `phl`
     - Copy the data from your external tables using a `CREATE TABLE AS ...` statement
-3.  Create a few maps in Carto:
-    - Find hotspots of properties that have been sold in the last 5 years
-    - Find hotspots of properties that have been rezoned within the last 3 years
-    - Find recently sold properties within a a half kilometer of a rail station
+3.  Create a few maps in Carto. Show the parcel polygons instead of just points by joining with the PWD Parcels dataset:
+    - Find hotspots of properties that have been sold in the last 5 years (see the OPA dataset)
+    - Find hotspots of properties that have been rezoned within the last 3 years (see the L&I dataset)
+    - Find recently sold properties within a a half kilometer of a rail station (you'll need to load in station info from SEPTA's GTFS dataset as well)
 
 
