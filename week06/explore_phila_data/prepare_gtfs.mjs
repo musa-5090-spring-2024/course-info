@@ -3,7 +3,7 @@ import fs from 'fs/promises';
 
 const __dirname = new URL('.', import.meta.url).pathname;
 const RAW_DATA_DIR = __dirname + 'raw_data/';
-const PROCESSED_DATA_DIR = __dirname + 'prepared_data/';
+const PREPARED_DATA_DIR = __dirname + 'prepared_data/';
 
 const GTFS_FEEDS = ['septa_bus', 'septa_rail'];
 
@@ -16,9 +16,9 @@ for (const gtfsFeed of GTFS_FEEDS) {
     const content = await fs.readFile(gtfsFilePath, 'utf8');
     const data = csv.parse(content, { "skip_empty_lines": true });
 
-    // Write the data to a new processed CSV file, creating the folder if it
+    // Write the data to a new prepared CSV file, creating the folder if it
     // doesn't exist.
-    const outputFolder = PROCESSED_DATA_DIR + gtfsFeed + '/';
+    const outputFolder = PREPARED_DATA_DIR + gtfsFeed + '/';
     const outputPath = outputFolder + gtfsFileName.replace('.txt', '.csv');
     await fs.mkdir(outputFolder, { recursive: true });
     await fs.writeFile(outputPath, csv.stringify(data), 'utf8');
