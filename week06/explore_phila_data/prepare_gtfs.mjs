@@ -1,9 +1,11 @@
 import * as csv from 'csv/sync';
 import fs from 'fs/promises';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const __dirname = new URL('.', import.meta.url).pathname;
-const RAW_DATA_DIR = __dirname + 'raw_data/';
-const PREPARED_DATA_DIR = __dirname + 'prepared_data/';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const RAW_DATA_DIR = path.join(__dirname, 'raw_data/');
+const PREPARED_DATA_DIR = path.join(__dirname, 'prepared_data/');
 
 const GTFS_FEEDS = ['septa_bus', 'septa_rail'];
 

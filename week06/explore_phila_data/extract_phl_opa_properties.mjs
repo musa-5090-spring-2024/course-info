@@ -1,8 +1,10 @@
 import fetch from 'node-fetch';
 import fs from 'fs/promises';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const __dirname = new URL('.', import.meta.url).pathname;
-const DATA_DIR = __dirname + 'raw_data/';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const DATA_DIR = path.join(__dirname, 'raw_data/');
 
 const url = 'https://opendata-downloads.s3.amazonaws.com/opa_properties_public.csv';
 const filename = DATA_DIR + 'phl_opa_properties.csv';

@@ -10,6 +10,10 @@ const data = await BigJSON.parse({
 const f = fs.createWriteStream('data/opa_properties_public.jsonl');
 for (const feature of data.features) {
   const row = feature.properties;
-  row.geog = JSON.stringify(feature.geometry);
+  if (feature.geometry && feature.geometry.coordinates) {
+    row.geog = JSON.stringify(feature.geometry);
+  } else {
+    row.geog = null;
+  }
   f.write(JSON.stringify(row) + '\n');
 }
