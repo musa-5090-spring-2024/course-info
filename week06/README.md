@@ -6,7 +6,7 @@
 
 - Code samples:
   - in the [explore_phila_data/](explore_phila_data/) directory you'll find extract and prepare scripts for a few datasets. I recommend reviewing them in this order:
-    - Extract & prepare scripts for PWD Parcels (the parcels are downloaded as a GeoJSON file).
+    - Extract & prepare scripts for PWD Parcels (the parcels are downloaded as a file).
     - Extract & prepare scripts for OPA Properties (the properties are downloaded as a CSV file with EPSG:2272 coords).
     - Extract & prepare scripts for L&I Permits (the permits are downloaded as a GeoPackage).
     - Extract & prepare scripts for SEPTA Bus and Rail data (the GTFS file requires some ... interesting code).
@@ -18,3 +18,7 @@ Continue working on the [BigQuery & Carto](../week05/exercises/ex_load_data_into
 ## Assignments
 
 - [Assignment 02](https://github.com/musa-5090-spring-2024/assignment02)
+
+## Resources
+
+- [_ES Modules: All You Need To Know_](https://konstantin.digital/blog/es-modules-all-you-need-to-know)
