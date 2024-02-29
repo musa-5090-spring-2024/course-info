@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@esri/proj-codes": "^3.2.0",
+    "betterknown": "^1.0.3",
     "node-fetch": "^3.3.2"
   }
 }

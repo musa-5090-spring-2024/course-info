@@ -26,8 +26,8 @@ with open(prepared_filename, 'w') as f:
             row['geog'] = None
         else:
             geom = wkt.loads(geom_wkt)
-            geom = transformer.transform(geom.x, geom.y)
-            row['geog'] = f'POINT({geom[0]} {geom[1]})'
+            x, y = transformer.transform(geom.x, geom.y)
+            row['geog'] = f'POINT({x} {y})'
         f.write(json.dumps(row) + '\n')
 
 print(f'Processed data into {prepared_filename}')
