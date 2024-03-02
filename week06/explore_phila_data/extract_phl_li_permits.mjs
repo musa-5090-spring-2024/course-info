@@ -15,6 +15,9 @@ if (!response.ok) {
   throw new Error(`HTTP error! status: ${response.status}`);
 }
 
-await fs.writeFile(filename, await response.text());
+// It matters whether there's text or binary data in the response. We deal with
+// binary data by putting it into a buffer first.
+const content = new Buffer.from(await response.arrayBuffer());
+await fs.writeFile(filename, content);
 
 console.log(`Downloaded ${filename}`);
