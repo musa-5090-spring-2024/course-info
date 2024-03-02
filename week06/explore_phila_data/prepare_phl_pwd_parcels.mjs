@@ -27,4 +27,4 @@ for (const feature of data.features) {
   f.write(JSON.stringify(row) + '\n');
 }
 
-console.log(`Processed data into ${prepared_filename}`);
+console.log(`Processed data into ${preparedFilename}`);

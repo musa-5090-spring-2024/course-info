@@ -1,4 +1,4 @@
-import * as csv from 'csv-parse/sync';
+import * as csv from 'csv/sync';
 import * as codes from '@esri/proj-codes';
 import fs from 'fs/promises';
 import { wktToGeoJSON } from 'betterknown';
