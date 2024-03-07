@@ -1,1 +1,4 @@
-requests==2.31.0
+fiona==1.9.5
+pyproj==3.6.1
+Requests==2.31.0
+Shapely==2.0.3
