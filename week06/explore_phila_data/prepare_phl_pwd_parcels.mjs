@@ -1,4 +1,4 @@
-import * as csv from 'csv/sync';
+import BigJSON from 'big-json';
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -12,11 +12,11 @@ const preparedFilename = PREPARED_DATA_DIR + 'phl_pwd_parcels.jsonl';
 
 // Load the data from the GeoJSON file
 const data = await BigJSON.parse({
-  body: fs.readFileSync(rawFilename)
+  body: await fs.readFile(rawFilename)
 });
 
 // Write the data to a JSONL file
-const f = fs.createWriteStream(preparedFilename);
+const f = await fs.open(preparedFilename, 'w');
 for (const feature of data.features) {
   const row = feature.properties;
   row.geog = (
@@ -24,7 +24,7 @@ for (const feature of data.features) {
     ? JSON.stringify(feature.geometry)
     : null
   );
-  f.write(JSON.stringify(row) + '\n');
+  await f.write(JSON.stringify(row) + '\n');
 }
 
 console.log(`Processed data into ${preparedFilename}`);
