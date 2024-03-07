@@ -1,4 +1,5 @@
 import csv
+import json
 import pathlib
 
 RAW_DATA_DIR = pathlib.Path(__file__).parent / 'raw_data'
@@ -13,13 +14,13 @@ for gtfs_feed in GTFS_FEEDS:
         # Read the data from the raw GTFS CSV file.
         with gtfs_path.open('r', encoding='utf-8') as f:
             reader = csv.reader(f)
-            data = [row for row in reader]
+            rows = [row for row in reader]
 
         # Write the data to a new prepared CSV file, creating the
         # necessary directories if they don't exist.
         output_folder = PREPARED_DATA_DIR / gtfs_feed
         output_path = output_folder / f'{gtfs_path.stem}.csv'
         output_folder.mkdir(parents=True, exist_ok=True)
+
         with output_path.open('w', encoding='utf-8') as f:
-            writer = csv.writer(f)
-            writer.writerows(data)
+            f.write('\n'.join(json.dumps(row) for row in rows))
