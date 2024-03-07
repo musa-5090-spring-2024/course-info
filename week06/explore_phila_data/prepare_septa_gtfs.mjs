@@ -10,7 +10,7 @@ const PREPARED_DATA_DIR = path.join(__dirname, 'prepared_data/');
 const GTFS_FEEDS = ['septa_bus', 'septa_rail'];
 
 for (const gtfsFeed of GTFS_FEEDS) {
-  const gtfsFeedFolder = RAW_DATA_DIR + gtfsFeed + '/';
+  const gtfsFeedFolder = path.join(RAW_DATA_DIR, gtfsFeed + '/');
   for (const gtfsFileName of await fs.readdir(gtfsFeedFolder)) {
 
     // Read the data from the raw GTFS CSV file.
@@ -20,8 +20,8 @@ for (const gtfsFeed of GTFS_FEEDS) {
 
     // Write the data to a new prepared CSV file, creating the folder if it
     // doesn't exist.
-    const outputFolder = PREPARED_DATA_DIR + gtfsFeed + '/';
-    const outputPath = outputFolder + gtfsFileName.replace('.txt', '.jsonl');
+    const outputFolder = path.join(PREPARED_DATA_DIR, gtfsFeed + '/');
+    const outputPath = path.join(outputFolder, gtfsFileName.replace('.txt', '.jsonl'));
     await fs.mkdir(outputFolder, { recursive: true });
 
     await fs.writeFile(

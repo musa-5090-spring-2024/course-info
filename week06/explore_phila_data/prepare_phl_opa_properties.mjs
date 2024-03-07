@@ -10,8 +10,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const RAW_DATA_DIR = path.join(__dirname, 'raw_data/');
 const PREPARED_DATA_DIR = path.join(__dirname, 'prepared_data/');
 
-const rawFilename = RAW_DATA_DIR + 'phl_opa_properties.csv';
-const preparedFilename = PREPARED_DATA_DIR + 'phl_opa_properties.jsonl';
+const rawFilename = path.join(RAW_DATA_DIR, 'phl_opa_properties.csv');
+const preparedFilename = path.join(PREPARED_DATA_DIR, 'phl_opa_properties.jsonl');
 
 // Load the data from the CSV file
 const data = csv.parse(

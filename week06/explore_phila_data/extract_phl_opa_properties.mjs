@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, 'raw_data/');
 
 const url = 'https://opendata-downloads.s3.amazonaws.com/opa_properties_public.csv';
-const filename = DATA_DIR + 'phl_opa_properties.csv';
+const filename = path.join(DATA_DIR, 'phl_opa_properties.csv');
 
 const response = await fetch(url);
 if (!response.ok) {
