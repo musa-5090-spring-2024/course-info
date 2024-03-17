@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "@esri/proj-codes": "^3.2.0",
+    "@google-cloud/bigquery": "^7.5.0",
+    "@google-cloud/storage": "^7.8.0",
+    "adm-zip": "^0.5.10",
+    "betterknown": "^1.0.3",
+    "big-json": "^3.2.0",
+    "csv": "^6.3.8",
+    "dotenv": "^16.4.5",
+    "duckdb": "^0.10.0",
+    "duckdb-async": "^0.10.0",
+    "gdal-async": "^3.8.4",
+    "node-fetch": "^3.3.2",
+    "proj4": "^2.10.0"
+  }
+}

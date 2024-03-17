@@ -1,0 +1,10 @@
+node_modules/
+env/
+
+raw_data/*
+prepared_data/*
+package-lock.json
+
+# Connection credentials
+keys/
+.env
