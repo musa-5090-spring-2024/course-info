@@ -1,3 +1,7 @@
+## Slides
+
+- https://musa-5090-spring-2024.github.io/presentation_slides/week07/SLIDES.html
+
 ## Resources
 
 ### URL Formatting (for APIs and other web requests)
