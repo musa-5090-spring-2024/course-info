@@ -1,4 +1,6 @@
 fiona==1.9.5
+google-cloud-bigquery==3.18.0
+google-cloud-storage==2.15.0
 pyproj==3.6.1
 Requests==2.31.0
 Shapely==2.0.3
