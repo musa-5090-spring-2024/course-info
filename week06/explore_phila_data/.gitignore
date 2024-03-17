@@ -1,5 +1,6 @@
 node_modules/
 env/
+*.pyc
 
 raw_data/*
 prepared_data/*
