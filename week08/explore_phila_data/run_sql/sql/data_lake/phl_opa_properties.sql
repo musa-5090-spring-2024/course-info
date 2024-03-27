@@ -1,23 +1,4 @@
-from dotenv import load_dotenv
-load_dotenv()
-
-import os
-import functions_framework
-from google.cloud import bigquery
-
-
-@functions_framework.http
-def load_phl_opa_properties(request):
-    bucket_name = os.getenv('DATA_LAKE_BUCKET')
-    dataset_name = os.getenv('DATA_LAKE_DATASET')
-
-    # Load the data into BigQuery as an external table
-    prepared_blobname = 'tables/phl_opa_properties/phl_opa_properties.jsonl'
-    table_name = 'phl_opa_properties'
-    table_uri = f'gs://{bucket_name}/{prepared_blobname}'
-
-    create_table_query = f'''
-    CREATE OR REPLACE EXTERNAL TABLE {dataset_name}.{table_name} (
+    CREATE OR REPLACE EXTERNAL TABLE ${dataset_name}.phl_opa_properties (
       `objectid` STRING,
       `assessment_date` STRING,
       `basements` STRING,
@@ -100,12 +81,5 @@ def load_phl_opa_properties(request):
     )
     OPTIONS (
       format = 'JSON',
-      uris = ['{table_uri}']
+      uris = ['gs://${bucket_name}/tables/phl_opa_properties/*.jsonl']
     )
-    '''
-
-    bigquery_client = bigquery.Client()
-    bigquery_client.query_and_wait(create_table_query)
-
-    print(f'Loaded {table_uri} into {dataset_name}.{table_name}')
-    return f'Loaded {table_uri} into {dataset_name}.{table_name}'

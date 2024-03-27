@@ -14,8 +14,8 @@ main:
             auth:
                 type: OIDC
     - loadPhlPropertyData:
-        call: http.post
+        call: http.get
         args:
-            url: 'https://us-central1-musa-344004.cloudfunctions.net/load_phl_opa_properties'
+            url: 'https://us-central1-musa-344004.cloudfunctions.net/run_sql?sql=data_lake/phl_opa_properties.sql'
             auth:
                 type: OIDC
