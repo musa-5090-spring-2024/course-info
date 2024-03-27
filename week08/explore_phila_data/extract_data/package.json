@@ -1,0 +1,9 @@
+{
+  "main": "index.mjs",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.3.0",
+    "@google-cloud/storage": "^7.9.0",
+    "dotenv": "^16.4.5",
+    "find-config": "^1.0.0"
+  }
+}

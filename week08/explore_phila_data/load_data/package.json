@@ -1,0 +1,8 @@
+{
+  "main": "index.mjs",
+  "dependencies": {
+    "@google-cloud/bigquery": "^7.5.0",
+    "@google-cloud/functions-framework": "^3.3.0",
+    "@google-cloud/storage": "^7.8.0",
+  }
+}

@@ -1,0 +1,21 @@
+main:
+    params: [input]
+    steps:
+    - extractPhlPropertyData:
+        call: http.post
+        args:
+            url: 'https://us-central1-musa-344004.cloudfunctions.net/extract_phl_opa_properties'
+            auth:
+                type: OIDC
+    - preparePhlPropertyData:
+        call: http.post
+        args:
+            url: 'https://us-central1-musa-344004.cloudfunctions.net/prepare_phl_opa_properties'
+            auth:
+                type: OIDC
+    - loadPhlPropertyData:
+        call: http.post
+        args:
+            url: 'https://us-central1-musa-344004.cloudfunctions.net/load_phl_opa_properties'
+            auth:
+                type: OIDC

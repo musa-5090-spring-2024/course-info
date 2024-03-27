@@ -1,0 +1,13 @@
+{
+  "main": "index.mjs",
+  "dependencies": {
+    "@esri/proj-codes": "^3.2.0",
+    "@google-cloud/functions-framework": "^3.3.0",
+    "@google-cloud/storage": "^7.9.0",
+    "betterknown": "^1.0.3",
+    "csv": "^6.3.8",
+    "dotenv": "^16.4.5",
+    "find-config": "^1.0.0",
+    "proj4": "^2.10.0"
+  }
+}
