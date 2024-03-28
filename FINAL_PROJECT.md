@@ -19,11 +19,11 @@ If you are already doing data-focussed projects for another class, talk to me ab
 1.  A high-level description of what you're doing
 2.  Who is on your team
 3.  What data you're going to use, and
-4.  What cloud-based components components you're going to use
+4.  What cloud-based components you think you're going to use
 
 As you develop the idea for your project, please add it to the spreadsheet I shared in the Canvas anouncement.
 
-**Presentation:** You should prepare, record, and upload a presentation by **May 8th**. The presentation should be 5-10 minutes, and should include:
+**Presentation:** You should prepare, record, and upload a presentation by **May 8th** (I'll provide a form to upload your video). The presentation should be 5-10 minutes, and should include:
 1.  A high-level description of what you did
 2.  A discussion of the cloud-based components you used, and how data flows between them
 3.  A demo of your project
