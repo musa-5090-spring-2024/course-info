@@ -42,10 +42,32 @@ gcloud functions deploy prepare_phl_opa_properties \
 gcloud functions call prepare_phl_opa_properties
 ```
 
+_run_sql_:
+
+```shell
+gcloud functions deploy run_sql \
+--gen2 \
+--region=us-central1 \
+--runtime=nodejs20 \
+--source=. \
+--entry-point=run_sql \
+--service-account=data-pipeline-robot-2024@musa-344004.iam.gserviceaccount.com \
+--memory=8Gi \
+--timeout=480s \
+--set-env-vars=DATA_LAKE_BUCKET=mjumbewu_musa_5090_data_lake,DATA_LAKE_DATASET=data_lake \
+--trigger-http \
+--no-allow-unauthenticated
+```
+
+```shell
+gcloud functions call run_sql
+```
+
 pipeline workflow:
 ```shell
 gcloud workflows deploy phl-property-data-pipeline \
 --source=phl-property-data-pipeline.yaml \
+--location=us-central1 \
 --service-account='data-pipeline-robot-2024@musa-344004.iam.gserviceaccount.com'
 
 gcloud scheduler jobs create http phl-property-data-pipeline \
