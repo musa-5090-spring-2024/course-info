@@ -1,0 +1,8 @@
+# Installed environment libraries
+env/
+node_modules/
+package-lock.json
+
+# Local environment variables
+.env
+keys/

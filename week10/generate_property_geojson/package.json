@@ -1,0 +1,9 @@
+{
+  "main": "index.mjs",
+  "dependencies": {
+    "@google-cloud/bigquery": "^7.6.1",
+    "@google-cloud/storage": "^7.10.2",
+    "dotenv": "^16.4.5",
+    "find-config": "^1.0.0"
+  }
+}
