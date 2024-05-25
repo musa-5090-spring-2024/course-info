@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>Simple Map/Chart UI</title>
+
+    <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+    <style>
+      main {
+        display: flex;
+        height: 80vh;
+      }
+
+      #chart, #map {
+        height: 100%;
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <!-- This chart will show the distribution of market values. -->
+      <section id="chart"></section>
+
+      <!-- This map will show the residential properties. -->
+      <section id="map"></section>
+    </main>
+
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/mapbox-gl-leaflet/leaflet-mapbox-gl.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-vector-tile-layer@0.16.1/dist/VectorTileLayer.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script type="module">
+      const map = L.map('map', {zoomSnap: 0, preferCanvas: true}).setView([39.95, -75.16], 13);
+
+      const baseLayer = L.mapboxGL({
+        style: 'mapbox://styles/mapbox/light-v11',
+        accessToken: 'pk.eyJ1IjoibWp1bWJlLXRlc3QiLCJhIjoiY2x2a2FucTFjMXZnbzJvbzFpMnc2N3YyaSJ9.JlHgj_LylDlnUWH9dJTrJw',
+      }).addTo(map);
+
+      const dataLayer = VectorTileLayer(
+        'https://storage.googleapis.com/musa5090s24_team1_public/tiles/properties/{z}/{x}/{y}.pbf',
+        {
+          minDetailZoom: 12,
+          maxDetailZoom: 20,
+          style: feature => {
+            return {
+              fillColor: 'rgba(0, 0, 0, 0.5)',
+              stroke: false,
+            };
+          }
+        }
+      ).addTo(map);
+    </script>
+  </body>
+</html>
